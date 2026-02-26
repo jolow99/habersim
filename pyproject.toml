@@ -1,0 +1,21 @@
+[project]
+name = "habersim"
+version = "0.1.0"
+description = "A Python research simulation framework for multi-agent deliberation and collective decision-making"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = []
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.30"]
+openai = ["openai>=1.0"]
+all = ["anthropic>=0.30", "openai>=1.0"]
+dev = ["pytest>=8.0", "pytest-cov"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
